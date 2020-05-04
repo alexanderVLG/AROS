@@ -1,0 +1,161 @@
+.header__container {
+  padding: 2rem calc((50vw - 580px)) 1rem;
+
+  background: linear-gradient(90deg, #010103, #22232e, #010103);
+}
+
+/* .flex__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 2rem;
+}
+
+@media (max-width: 760px) {
+  .flex__container {
+    justify-content: center;
+  }
+} */
+
+.grid__container {
+  display: grid;
+  grid-template-areas: "l . g";
+  margin: 0 2rem;
+}
+
+@media (max-width: 760px) {
+  .grid__container {
+    grid-template-areas: ". l g";
+  }
+}
+
+@media (max-width: 760px) {
+  .flex__wrap {
+    display: flex;
+    justify-content: center;
+    grid-area: l;
+    margin-left: 12px;
+  }
+}
+
+.logo {
+  width: 90px;
+  height: 35px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 760px) {
+  .logo {
+    width: 6rem;
+    height: 3.3rem;
+  }
+}
+
+.grid__item {
+  grid-area: g;
+}
+
+.language__switcher {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.globe__icon {
+  margin-top: 0.5rem;
+  width: 23px;
+  height: 23px;
+  transition: 350ms;
+  transition-property: all;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+
+.submenu--hidden {
+  display: none;
+}
+
+.submenu {
+  position: absolute;
+  top: 30px;
+  right: -43px;
+
+  width: 110px;
+  color: $black;
+
+  background-color: $white;
+  border: 0;
+  box-shadow: 0 0 2px $dark-gray;
+  z-index: 1;
+}
+
+@media (max-width: 1214px) {
+  .submenu {
+    right: 0;
+  }
+}
+
+.submenu__item {
+  margin: 0.5rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.submenu__link {
+  display: inline;
+  padding: 1rem 0;
+  color: $submenuLinks;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.to__mainpage {
+  padding: 2rem calc((50vw - 580px));
+}
+
+@media (max-width: 760px) {
+  .to__mainpage {
+    display: none;
+  }
+}
+
+.nav {
+  margin: 0 2rem;
+}
+
+.nav__item {
+  display: inline;
+  padding-right: 0.5rem;
+
+  border-right: 1px solid #44a8f2;
+
+  &:last-child {
+    padding-right: none;
+    border-right: none;
+  }
+}
+
+.nav__item {
+  color: $gray;
+}
+
+.nav__link {
+  color: $gray;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
